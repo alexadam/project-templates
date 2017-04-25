@@ -16,6 +16,7 @@
                 xhr.open('GET', 'https://alexadam.github.io/project-templates/test.json');
                 xhr.setRequestHeader('Content-Type', 'application/json');
                 xhr.onload = (request) => {
+                    console.log(request, 'yuyuyuyuy');
                     let response = request.currentTarget.response || request.target.responseText;
                     alert(response);
                 };
