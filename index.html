@@ -2,27 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Project Templates</title>
     </head>
     <body>
-        <h1>Test</h1>
-    </body>
-
-    <script type="text/javascript">
-        (
-            function () {
-                let xhr = new XMLHttpRequest();
-                xhr.responseType = "json";
-                xhr.open('GET', 'https://alexadam.github.io/project-templates/test.json');
-                xhr.setRequestHeader('Content-Type', 'application/json');
-                xhr.onload = (request) => {
-                    console.log(request, 'yuyuyuyuy');
-                    let response = request.currentTarget.response || request.target.responseText;
-                    alert(JSON.stringify(response));
-                };
-                xhr.send();
-
-            }
-        )()
-    </script>
+        <div id="app"></div>
+    <script type="text/javascript" src="app.js"></script></body>
 </html>
