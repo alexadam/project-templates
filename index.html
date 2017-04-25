@@ -7,4 +7,21 @@
     <body>
         <h1>Test</h1>
     </body>
+
+    <script type="text/javascript">
+        (
+            function () {
+                let xhr = new XMLHttpRequest();
+                xhr.responseType = "json";
+                xhr.open('GET', 'https://alexadam.github.io/project-templates/test.json');
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.onload = (request) => {
+                    let response = request.currentTarget.response || request.target.responseText;
+                    alert(response);
+                };
+                xhr.send();
+
+            }
+        )()
+    </script>
 </html>
