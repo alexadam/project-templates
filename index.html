@@ -19,7 +19,7 @@
                 xhr.onload = (request) => {
                     console.log(request, 'yuyuyuyuy');
                     let response = request.currentTarget.response || request.target.responseText;
-                    alert(response);
+                    alert(response[templates], response[templates].length);
                 };
                 xhr.send();
 
