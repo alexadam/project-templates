@@ -76,6 +76,11 @@ var config = {
 module.exports = config;
 EOT
 
+# create .gitignore
+cat <<EOT >> .gitignore
+node_modules/
+dist/
+EOT
 
 #################################
 ## Create example files
