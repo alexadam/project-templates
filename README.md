@@ -21,14 +21,12 @@ The resulting project template should contain all the configuration files needed
 -------------------
 
 ```
-A build script
-    calls -> build.sh + build parts
+Run a build script
+    it calls -> build.sh + build parts
         creates -> project template
-                   config files
-                   source files
-                   building parts / scripts -> are combined into init.sh
+        assembles -> config files
+                     source files
+                     building parts / scripts -> are combined into init.sh
 
-                results -> the project template + init.sh
-
-                        run -> init.sh -> example project
+Then, in the project template folder, run  init.sh -> example project
 ```
