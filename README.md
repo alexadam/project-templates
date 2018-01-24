@@ -20,6 +20,7 @@ The resulting project template should contain all the configuration files needed
 
 -------------------
 
+```
 A build script
     calls -> build.sh + build parts
         creates -> project template
@@ -30,3 +31,4 @@ A build script
                 results -> the project template + init.sh
 
                         run -> init.sh -> example project
+```
