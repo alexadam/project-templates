@@ -73,3 +73,5 @@ cp -R ../config-files/. $DEST_DIR/
 
 # copy example source files
 cp -R ../src-files/$TARGET/. $DEST_DIR/
+
+chmod +x $DEST_DIR/init.sh

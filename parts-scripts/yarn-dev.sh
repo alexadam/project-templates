@@ -1,5 +1,6 @@
 yarn add --dev webpack \
                webpack-dev-server \
+               webpack-cli \
                style-loader \
                sass-loader \
                node-sass \
