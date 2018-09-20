@@ -28,7 +28,7 @@ var config = {
             loader: 'babel-loader',
             exclude: /(node_modules|bower_components)/,
             query: {
-                presets: ["react", "latest", "stage-0"]
+                presets: ["@babel/preset-env", "@babel/preset-react"]
             }
         }]
     },
