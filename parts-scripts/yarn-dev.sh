@@ -10,4 +10,5 @@ yarn add --dev webpack \
                "babel-loader" \
                "@babel/preset-react" \
                "@babel/preset-env" \
-               "@babel/preset-stage-0"
+               "@babel/preset-stage-0" \
+               "babel-plugin-transform-class-properties"

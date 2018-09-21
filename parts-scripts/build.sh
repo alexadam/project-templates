@@ -1,3 +1,4 @@
+#!/bin/bash
 ########################################
 #
 # Usage: ./build.sh TARGET_NAME Add_Component_1 Add_Component_2 Add_Component_3 ...

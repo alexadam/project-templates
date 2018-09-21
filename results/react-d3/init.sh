@@ -15,11 +15,12 @@ yarn add --dev webpack \
                node-sass \
                html-webpack-plugin \
                css-loader \
-               babel-core \
-               babel-loader \
-               babel-preset-react \
-               babel-preset-latest \
-               babel-preset-stage-0
+               "@babel/core" \
+               "babel-loader" \
+               "@babel/preset-react" \
+               "@babel/preset-env" \
+               "@babel/preset-stage-0" \
+               "babel-plugin-transform-class-properties"
 
 # Remove the last line
 sed -i.bak '$ d' package.json && rm package.json.bak
