@@ -10,7 +10,7 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 
 var config = {
-    entry: app_dir + '/app.js',
+    entry: app_dir + '/App.tsx',
     output: {
         path: __dirname + '/dist',
         filename: 'app.js'
@@ -24,12 +24,14 @@ var config = {
                 'sass-loader'
             ]
         }, {
-            test: /\.js$/,
-            loader: 'babel-loader',
-            exclude: /(node_modules|bower_components)/,
-            options: { babelrcRoots: ['.', '../'] }
+            test: /\.tsx?$/,
+            loader: "awesome-typescript-loader",
+            exclude: /(node_modules|bower_components)/
         }]
     },
-    plugins: [HTMLWebpackPluginConfig]
+    plugins: [HTMLWebpackPluginConfig],
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", ".jsx"]
+    },
 };
 module.exports = config;
