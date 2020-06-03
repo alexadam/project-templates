@@ -1,6 +1,16 @@
 import * as React from 'react';
 
 
+/*
+const Comp: React.FC<{}> = ({}) => {
+    return (
+        <div></div>
+    )
+}
+export default Comp
+*/
+
+
 type NumbersProps = {
     initValue: number
 }
