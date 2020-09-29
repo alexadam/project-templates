@@ -1,5 +1,5 @@
 var path = require("path");
-
+var webpack = require("webpack")
 var app_dir = __dirname + '/client';
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -30,12 +30,19 @@ var config = {
             exclude: /(node_modules|bower_components)/
         }]
     },
-    plugins: [HTMLWebpackPluginConfig],
+    plugins: [
+        HTMLWebpackPluginConfig,
+        // alternative to target: "electron-main"
+        // new webpack.ExternalsPlugin('commonjs', [
+        //     'electron'
+        // ])
+    ],
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".jsx"]
     },
     devServer: {
         historyApiFallback: true
-    }
+    },
+    target: 'electron-main'
 };
 module.exports = config;

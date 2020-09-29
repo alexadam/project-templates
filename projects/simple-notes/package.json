@@ -1,0 +1,38 @@
+{
+  "name": "simple-notes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.4.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router-dom": "^5.1.5",
+    "awesome-typescript-loader": "^5.2.1",
+    "concurrently": "^5.3.0",
+    "css-loader": "^4.2.2",
+    "electron": "^10.1.1",
+    "html-webpack-plugin": "^4.4.1",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "dev": "export NODE_PATH=\"./node_modules\" && webpack-dev-server --port=8080 --inline --progress --colors --mode=\"development\"",
+    "build": "export NODE_PATH=\"./node_modules\" && npm run clean && webpack --progress -p --mode=\"production\"",
+    "clean": "rm -rf dist/*",
+    "electron1": "./node_modules/.bin/tsc -p ./electron-app && cp ./electron-app/main.html ./electron-app/dist/  && electron ./electron-app/dist/main.js",
+    "electron": "yarn dev & yarn electron1"
+  }
+}

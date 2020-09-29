@@ -19,7 +19,7 @@ const MainView: React.FC<{}> = () => {
     return (
         <div className="notes-view">
             <div className="header">
-                <h1>All Notes</h1>
+                <h1>All Notes test</h1>
                 <button className="action-button" onClick={onNewNote}>New Note</button>
             </div>
             <NotesList notes={allNotes}/>
