@@ -1,0 +1,31 @@
+.note-editor {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.menu {
+  width: 600px;
+  display: flex; flex-direction: row;
+  justify-content: space-between;
+}
+
+.note-title {
+  width: 600px;
+  margin-top: 10px;
+
+  input {
+    width: 600px;
+    padding: 2px;
+  }
+}
+
+.note-content {
+  width: 600px; height: 100%;
+
+  textarea {
+    width: 600px; height: 300px;
+    margin-top: 20px;
+  }
+}
