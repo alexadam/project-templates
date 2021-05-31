@@ -1,7 +1,10 @@
 #!/bin/sh
 
 rm -rf node_modules
+rm -rf dist
+rm -rf build
 rm package.json
+rm yarn.lock
 
 yarn init --yes
 
@@ -9,7 +12,7 @@ yarn add react react-dom
 
 yarn add --dev @types/react \
         @types/react-dom \
-        awesome-typescript-loader \
+        ts-loader \
         css-loader \
         html-webpack-plugin \
         node-sass \
