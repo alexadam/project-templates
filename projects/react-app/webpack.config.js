@@ -65,7 +65,6 @@ const config = {
     port: 8080,
     // open: true,
     hot: true,
-    inline: true,
     historyApiFallback: true,
   },
 };
