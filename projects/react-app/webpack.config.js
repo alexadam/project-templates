@@ -1,6 +1,6 @@
 const path = require("path");
 
-const app_dir = __dirname + '/client';
+const app_dir = __dirname + '/src';
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
