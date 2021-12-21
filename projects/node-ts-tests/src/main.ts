@@ -3,34 +3,19 @@ import express, { Application, Router } from 'express';
 
 import { HelloRoutes } from "./modules/hello/hello.routes"
 
-class Server {
+const app: Application = express();
 
-  private app: Application;
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-  public constructor() {
-    this.app = express();
+const routes = [
+  new HelloRoutes()
+]
 
-    this.app.use(cors());
-    this.app.use(express.json());
-    this.app.use(express.urlencoded({ extended: false }));
+routes.forEach(item => app.use('/', item.router))
 
-    this.setupRoutes()
-  }
+app.listen(3000, '0.0.0.0');
 
-  public listen(): void {
-    this.app.listen(3000, '0.0.0.0');
-  }
-
-  private setupRoutes() {
-    const routes = [
-      new HelloRoutes()
-    ]
-
-    routes.forEach(item => this.app.use('/', item.router))
-  }
-
-}
-
-const server = new Server()
-
-server.listen()
+// for tests
+export default app

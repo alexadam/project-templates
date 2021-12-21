@@ -1,3 +1,4 @@
+import app from '../../main';
 import request from 'supertest';
 
 describe("demo test", () => {
@@ -6,7 +7,7 @@ describe("demo test", () => {
     })
 })
 
-const testTarget =  'http://localhost:3000'; 
+const testTarget = app // OR: 'http://localhost:3000'; 
 
 describe('Test REST Endpoint', () => {
     it('Request /hello should return Hello World!', async () => {
