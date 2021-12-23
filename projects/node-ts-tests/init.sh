@@ -10,6 +10,9 @@ yarn init --yes
 
 yarn add express cors
 
+# logger
+yarn add pino pino-pretty
+
 yarn add --dev typescript \
     tslint \
     ts-node-dev \
