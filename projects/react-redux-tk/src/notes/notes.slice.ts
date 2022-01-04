@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { INoteData } from "./model"
+import { INoteData } from "./notes.model"
 
 const initialState: INoteData[] = [{
   id: "note" + (Math.random() * 1000000),

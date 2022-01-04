@@ -1,6 +1,6 @@
 const path = require("path");
 
-const app_dir = __dirname + '/client';
+const app_dir = __dirname + '/src';
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -27,7 +27,7 @@ const config = {
         ]
       }, {
         test: /\.tsx?$/,
-        loader: "awesome-typescript-loader",
+        loader: "ts-loader",
         exclude: /(node_modules|bower_components)/
       },
       {
@@ -65,7 +65,6 @@ const config = {
     port: 8080,
     // open: true,
     hot: true,
-    inline: true,
     historyApiFallback: true,
   },
 };

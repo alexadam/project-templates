@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useHistory, useParams } from "react-router-dom";
-import { RootState } from "../root-reducer";
-import { addNote, updateNote, removeNote } from "./slice";
-import { INoteData } from "./model";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { RootState } from "../root.reducer";
+import { addNote, updateNote, removeNote } from "./notes.slice";
+import { INoteData } from "./notes.model";
 import './editor.scss'
 
 interface RouteParams {
@@ -13,11 +13,11 @@ interface RouteParams {
 const NoteEditor = () => {
   const params: RouteParams = useParams()
   const dispatch = useDispatch()
-  const browseHistory = useHistory()
+  const navigate = useNavigate()
   const allNotes: INoteData[] = useSelector((state: RootState) => state.Notes)
 
   const [noteData, setNoteData] = useState({
-    id: 'doc' + Math.floor(Math.random() * 1000000),
+    id: 'doc' + Math.floor(Math.random() * 1000000000),
     title: "New Note",
     content: ''
   } as INoteData)
@@ -66,7 +66,7 @@ const NoteEditor = () => {
     const ans = confirm("Are you sure you want to delete this note?")
     if (ans) {
       dispatch(removeNote(noteData))
-      browseHistory.push('/')
+      navigate('/')
     }
   }
 
@@ -75,7 +75,7 @@ const NoteEditor = () => {
       <div className="editor-toolbar">
         <div className="menu">
           <div className="start-menu">
-            <button onClick={()=>browseHistory.push('/')}>&larr; All Notes</button>
+            <button onClick={() => navigate('/')}>&larr; All Notes</button>
           </div>
           <div className="end-menu">
             <button onClick={onRemoveNote} className="important">Delete</button>
@@ -92,7 +92,7 @@ const NoteEditor = () => {
         />
       </div>
       <div className="note-content">
-        <textarea 
+        <textarea
           value={noteData.content}
           onChange={onContentChange}
         ></textarea>

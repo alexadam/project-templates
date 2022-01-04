@@ -15,7 +15,7 @@ yarn add --dev @types/react \
         @types/react-dom \
         @types/react-router-dom \
         @types/react-redux \
-        awesome-typescript-loader \
+        ts-loader \
         css-loader \
         html-webpack-plugin \
         node-sass \

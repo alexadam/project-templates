@@ -1,5 +1,5 @@
 import { combineReducers } from '@reduxjs/toolkit'
-import Notes from './notes/slice'
+import Notes from './notes/notes.slice'
 
 const rootReducer = combineReducers({
     //...
