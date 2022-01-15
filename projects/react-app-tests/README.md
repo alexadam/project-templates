@@ -1,7 +1,5 @@
 
-# React + TypeScript App Template
-
-About: https://alexadam.dev/blog/create-react-project.html 
+# React + Tests App Template
 
 Download this project template, then:
 
@@ -9,7 +7,7 @@ Download this project template, then:
 mkdir new-app
 cd new-app
 
-rsync -rtv ../project-templates/projects/react-app/ .
+rsync -rtv ../project-templates/projects/react-app-tests/ .
 
 # then
 
