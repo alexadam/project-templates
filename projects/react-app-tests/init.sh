@@ -15,7 +15,7 @@ yarn add --dev @types/react \
         ts-loader \
         css-loader \
         html-webpack-plugin \
-        node-sass \
+        sass \
         sass-loader \
         style-loader \
         typescript \
