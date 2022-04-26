@@ -8,12 +8,10 @@ rm yarn.lock
 
 yarn init --yes
 
-yarn add react react-dom electron
+yarn add react react-dom
 
-yarn add --dev  @types/react \
+yarn add --dev @types/react \
         @types/react-dom \
-        @types/electron \
-        electron-packager \
         ts-loader \
         css-loader \
         html-webpack-plugin \
@@ -23,7 +21,10 @@ yarn add --dev  @types/react \
         typescript \
         webpack \
         webpack-cli \
-        webpack-dev-server
+        webpack-dev-server \
+        electron \
+        @types/electron \
+        electron-packager
 
 # Remove the last line
 sed -i.bak '$ d' package.json && rm package.json.bak
@@ -36,6 +37,7 @@ cat <<EOT >> package.json
     "dev": "webpack serve --config webpack.react.config.js",
     "dev:electron": "webpack --config webpack.electron.config.js --mode development && electron ./dist/electron-app.js --dev",
     "build:electron": "webpack --config webpack.electron.config.js",
-    "deploy": "electron-packager ./dist app-name --overwrite --asar=false --platform=linux --arch=x64 --prune=true --out=release-builds"
-  }
+    "deploy": "electron-packager ./dist app-name --overwrite --asar=false --platform=linux --arch=x64 --prune=true --out=release-builds",
+    "deploy-macos": "electron-packager ./dist app-name --overwrite --asar=false --platform=darwin --arch=x64 --prune=true --out=release-builds"
+    }
 }

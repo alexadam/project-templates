@@ -1,6 +1,6 @@
 const path = require("path");
 
-const app_dir = __dirname + '/client';
+const app_dir = __dirname + '/src';
 
 const config = {
   mode: 'development',
@@ -11,12 +11,11 @@ const config = {
     filename: 'electron-app.js',
   },
   module: {
-    rules: [ {
-        test: /\.tsx?$/,
-        loader: "ts-loader",
-        exclude: /(node_modules|bower_components)/
-      }
-    ]
+    rules: [{
+      test: /\.tsx?$/,
+      loader: "ts-loader",
+      exclude: /(node_modules|bower_components)/
+    }]
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"]

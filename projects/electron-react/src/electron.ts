@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain } from 'electron';
+import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
 
@@ -12,15 +12,20 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    // maxHeight:600,
+    // maxWidth:600,
+    // minHeight:400,
+    // minWidth:400,
+    // backgroundColor:'#7B435B'
 
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false
     },
   });
 
   if (isDev()) {
     mainWindow.loadURL(`http://localhost:8080`);
+    // mainWindow.webContents.openDevTools()
   } else {
     mainWindow.loadURL(
       url.format({
@@ -34,16 +39,6 @@ function createWindow() {
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
-
-
-  // handle messages from React app
-  ipcMain.on('sync-message', (event, arg) => {
-    event.returnValue = arg.number * 2
-  })
-
-  ipcMain.on('async-message', (event, arg) => {
-    event.sender.send('async-reply', { number: arg.number * 2 })
-  })
 }
 
 app.on('ready', createWindow);
@@ -55,9 +50,9 @@ app.on("window-all-closed", () => {
 });
 
 app.on("activate", () => {
+  // On macOS it's common to re-create a window in the app when the
+  // dock icon is clicked and there are no other windows open.
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
   }
 });
-
-app.allowRendererProcessReuse = true;

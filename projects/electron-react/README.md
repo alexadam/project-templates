@@ -1,5 +1,7 @@
 
-# Electron + React + TypeScript App Template
+# React + TypeScript App Template
+
+About: https://alexadam.dev/blog/create-react-project.html 
 
 Download this project template, then:
 
@@ -7,7 +9,7 @@ Download this project template, then:
 mkdir new-app
 cd new-app
 
-rsync -rtv ../project-templates/projects/electron-react/ .
+rsync -rtv ../project-templates/projects/react-app/ .
 
 # then
 
@@ -15,7 +17,5 @@ rsync -rtv ../project-templates/projects/electron-react/ .
 
 yarn dev
 
-# and in another terminal
-
-yarn dev:electron
+# then open a web browser and go to http://localhost:8080/
 ```
