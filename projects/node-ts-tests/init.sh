@@ -22,7 +22,7 @@ yarn add --dev typescript \
     @types/cors \
     jest \
     @types/jest \
-    ts-jest \
+    ts-jest@next \
     supertest \
     @types/supertest
 

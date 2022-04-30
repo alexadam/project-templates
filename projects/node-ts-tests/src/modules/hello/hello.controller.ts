@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
+import HelloService from './hello.service';
 
 export class HelloController {
 
@@ -8,11 +9,13 @@ export class HelloController {
 
   public getHello(req: Request, res: Response, next: NextFunction): void {
     const name = req.params.name
-    res.json({ message: `Hello ${name}` })
+    const message = HelloService.sayHello(name)
+    res.json({ message })
   }
 
   public sayHelloTo(req: Request, res: Response, next: NextFunction): void {
     const to = req.body.sayHelloTo
-    res.json({ message: `Hello ${to}` })
+    const message = HelloService.sayHello(to)
+    res.json({ message })
   }
 }

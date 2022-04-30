@@ -1,5 +1,6 @@
 import app from '../../main';
 import request from 'supertest';
+import HelloService from './hello.service';
 
 describe("demo test", () => {
   it("should be equal", () => {
@@ -28,6 +29,15 @@ describe('Test REST Endpoint', () => {
     expect(result.body).toMatchObject({ message: "Hello test2" })
   });
 });
+
+///
+
+describe("Test Hello Service", () => {
+  it("should say Hello World", () => {
+    const result = HelloService.sayHello('World')
+    expect(result).toBe('Hello World')
+  })
+})
 
 afterAll(done => {
   done();
