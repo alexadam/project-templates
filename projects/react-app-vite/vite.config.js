@@ -13,4 +13,10 @@ export default defineConfig({
   build: {
     outDir: '../dist',
   },
+  server: {
+    port: 8080
+  },
+  preview: {
+    port: 8080
+  }
 })
