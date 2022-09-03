@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Old Standard TT', serif;
+    font-family: 'Literata', serif;
+    font-family: 'Libre Baskerville', 'Baskerville', serif;
+
+    margin: auto;
+    /* text-align: justify; */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1 { text-align: left; }
+h2 { text-align: left; }
+h3 { text-align: left; }
+h4 { text-align: left; }
+h5 { text-align: left; }
+h6 { text-align: left; }
+
+h1.title {
+    margin-top: 0;
+    text-align: center;
+}
+
+p.author {
+    text-align: center;
+}
+
+ol.toc {
+    padding: 0;
+    margin: 1em 0;
+    padding: 0 0 0 2em;
+}
+
+ul.toc ul, ol.toc ol {
+    margin: .3em 0;
+}
+
+li { margin: 0; padding: 0 5px; }
+
+code {
+    font-family: monospace;
+    background-color: rgb(247, 247, 247);
+}
+
+pre {
+    font-family: monospace;;
+    padding: 16px;
+    overflow: auto;
+    font-size: 80%;
+    line-height: 1.45;
+    border-radius: 3px;
+    background-color: rgb(247, 247, 247);
+}

@@ -1,0 +1,19 @@
+---
+title:
+- type: main
+  text: My Book
+- type: subtitle
+  text: Subtitle
+creator:
+- role: author
+  text: John Smith
+- role: editor
+  text: Sarah Jones
+language: en-US
+keywords: [key, word]
+identifier:
+- scheme: DOI
+  text: doi:10.234234.234/33
+publisher: Independent
+rights: © 2020 John Smith, All Rights Reserved
+...
