@@ -8,19 +8,20 @@ rm yarn.lock
 
 yarn init --yes
 
-yarn add react react-dom \
-         three \
-         @react-three/fiber \
-         @react-three/drei \
-         @react-three/postprocessing
+yarn add react react-dom
 
 yarn add --dev @types/react \
         @types/react-dom \
         sass \
         typescript \
         @vitejs/plugin-react \
-        vite
-        @types/three
+        vite \
+        jest \
+        @types/jest \
+        ts-jest \
+        @testing-library/react \
+        @testing-library/jest-dom \
+        jest-environment-jsdom \
 
 # Remove the last line
 sed -i.bak '$ d' package.json && rm package.json.bak
@@ -31,6 +32,7 @@ cat <<EOT >> package.json
       "clean": "rm -rf dist/*",
       "build": "vite --config vite.config.js build",
       "dev": "vite --config vite.config.js serve",
-      "preview": "vite --config vite.config.js preview"
+      "preview": "vite --config vite.config.js preview",
+      "test": "jest"
    }
 }

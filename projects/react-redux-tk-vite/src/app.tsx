@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import ReactDOM from "react-dom/client";
 import {
   BrowserRouter as Router,
   Routes,
@@ -12,8 +12,9 @@ import Notes from './notes/notes';
 import './app.scss'
 
 const App = () => {
+
   return (
-    <Provider store={store}>
+        <Provider store={store}>
       <Router>
         <Routes>
           <Route path="/" element={<Notes />} />
@@ -25,7 +26,5 @@ const App = () => {
   )
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById("app") as HTMLElement);
+root.render(<App />);
